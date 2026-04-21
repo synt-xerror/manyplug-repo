@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T13:23:13.743Z",
+  "lastUpdated": "2026-04-21T13:43:02.354Z",
   "plugins": {
     "a": {
       "name": "a",
@@ -20,10 +20,19 @@
     "audio": {
       "name": "audio",
       "author": "SyntaxError <dev@maneos.net> (https://git.maneos.net)",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "media",
       "service": false,
-      "dependencies": {}
+      "externalDependencies": {
+        "yt-dlp": {
+          "command": "yt-dlp",
+          "optional": false
+        },
+        "ffmpeg": {
+          "command": "ffmpeg",
+          "optional": false
+        }
+      }
     },
     "figurinha": {
       "name": "figurinha",
