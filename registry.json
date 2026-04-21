@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T19:02:06.357Z",
+  "lastUpdated": "2026-04-21T05:56:16.900Z",
   "plugins": {
     "a": {
       "name": "a",
@@ -53,11 +53,12 @@
       "service": false,
       "dependencies": {}
     },
-    "xp": {
-      "name": "xp",
-      "version": "0.1.0",
-      "category": "social",
-      "service": true,
+    "obrigado": {
+      "name": "obrigado",
+      "author": "SyntaxError <dev@maneos.net> (https://git.maneos.net)",
+      "version": "1.0.0",
+      "category": "fun",
+      "service": false,
       "dependencies": {}
     }
   }
