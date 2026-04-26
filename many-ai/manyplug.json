@@ -4,7 +4,7 @@
   "description": "Chat with an AI model through Groq API!",
   "category": "utility",
   "service": false,
-  "author": "",
+  "author": "SyntaxError <dev@maneos.net> (https://git.maneos.net)",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
