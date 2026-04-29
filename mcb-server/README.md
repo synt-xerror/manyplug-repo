@@ -1,6 +1,6 @@
 # mcb-server
 
-Minecraft Bedrock server monitor for ManyBot. Shows when players join/leave your server.
+Minecraft Bedrock server monitor for ManyBot. Notifies when players join or leave.
 
 ## Installation
 
@@ -14,36 +14,42 @@ Add to your `manybot.conf`:
 
 ```
 MC_GROUP_ID=5566999999999@g.us    # WhatsApp group to send notifications
-MC_LOG_FILE=/path/to/server.log   # Path to your Minecraft server log
+MC_LOG_FILE=/var/log/minecraft/server.log   # Path to your Minecraft server log
+```
+
+### Setting up the log file (systemd)
+
+To enable logging for your Minecraft Bedrock server via systemd, add the following to your service file:
+
+```ini
+[Service]
+StandardOutput=append:/var/log/minecraft/server.log
+StandardError=append:/var/log/minecraft/server.log
+```
+
+Then restart your service:
+
+```bash
+sudo systemctl restart minecraft-bedrock
 ```
 
 ## Features
 
 - **Auto notifications**: Sends messages when players connect/disconnect
-- **Username registration**: Map WhatsApp users to Minecraft usernames
-- **Player list**: See who's online with WhatsApp mappings
+- **Player list**: See who's currently online
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
 | `!players` | List players currently online |
-| `!mcreg <username>` | Register your Minecraft username |
-| `!mcunreg` | Unregister your username |
-| `!mclist` | List all registered users |
 
 ## Example
 
 ```
-!mcreg Steve
-✅ Steve registered as You!
-
 !players
-*Players playing Minecraft currently: 2*
-- Steve (WhatsApp: @5566999999999)
+🎮 Players online (2):
+- Steve
 - Alex
 ```
 
-## License
-
-MIT
